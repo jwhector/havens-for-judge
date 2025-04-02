@@ -7,6 +7,8 @@ const currentPath = Astro.url.pathname;
 
 const baseUrl = import.meta.env.BASE_URL || "/";
 
+console.log("Base URL:", baseUrl);
+
 // Function to check if a path is active
 const isActive = (path: string) => {
     const pathWithBaseUrl = baseUrl + path;
@@ -54,11 +56,11 @@ const isActive = (path: string) => {
                     <li class={isActive(baseUrl) ? "bg-primary-light" : ""}>
                         <a href={baseUrl} class="px-2 py-2 block">HOME</a>
                     </li>
-                    <li class={isActive("/about") ? "bg-primary-light" : ""}>
+                    <li class={isActive("about") ? "bg-primary-light" : ""}>
                         <a href={`${baseUrl}/about`} class="px-2 py-2 block">ABOUT</a>
                     </li>
                     <li
-                        class={isActive("/testimonials")
+                        class={isActive("testimonials")
                             ? "bg-primary-light"
                             : ""}
                     >
