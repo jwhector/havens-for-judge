@@ -1,0 +1,33 @@
+---
+import Image from "astro/components/Image.astro";
+
+interface Props {
+  backgroundImage?: string;
+  image: ImageMetadata;
+  altText: string;
+}
+
+const { image, altText } = Astro.props;
+---
+
+<!-- Hero Section with Parallax Photo -->
+<section
+  class="bg-[auto_800px] bg-bottom bg-fixed bg-no-repeat"
+>
+  <div class="hero-image"></div>
+  <Image src={image} alt={altText} class="w-full" />
+</section>
+
+<style>
+  .hero-image {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0);
+  }
+</style>

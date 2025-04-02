@@ -1,0 +1,141 @@
+---
+import Image from "astro/components/Image.astro";
+import poster from "../assets/havens_upscaled_sharpened.jpg";
+
+// Get current path to determine active page
+const currentPath = Astro.url.pathname;
+
+// Function to check if a path is active
+const isActive = (path: string) => {
+    if (path === "/" && currentPath === "/") return true;
+    if (path !== "/" && currentPath.startsWith(path)) return true;
+    return false;
+};
+---
+
+<!-- Navigation Bar -->
+<header class="w-full">
+    <div class="fixed z-50 w-full">
+        <div
+            class="flex justify-center relative bg-primary h-[80px] p-6 sm:p-4"
+        >
+            <div
+                class="xl:w-[1170px] lg:w-[960px] md:w-[750px] sm:w-[500px] w-screen"
+            >
+                <Image
+                    src={poster}
+                    alt="Candidate Photo"
+                    class="absolute top-0 shadow-[0_4px_6px_rgba(0,0,0,0.4)] z-50 md:w-fit sm:w-[250px] w-[150px]"
+                />
+                
+                <!-- Hamburger menu button (only visible on mobile) -->
+                <button
+                    id="hamburger-btn"
+                    class="md:hidden z-50 flex flex-col justify-center items-center w-10 h-10 relative ml-auto"
+                    aria-label="Menu"
+                >
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Desktop Navigation (hidden on mobile) -->
+        <nav class="hidden md:flex justify-center bg-white z-50 w-full shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
+            <div
+                class="xl:w-[1170px] md:w-[750px] lg:w-[960px] w-screen"
+            >
+                <ul
+                    class="nav-links sm:ml-[300px] md:ml-[350px] flex list-none gap-4"
+                >
+                    <li class={isActive("/") ? "bg-primary-light" : ""}>
+                        <a href="/" class="px-2 py-2 block">HOME</a>
+                    </li>
+                    <li class={isActive("/about") ? "bg-primary-light" : ""}>
+                        <a href="/about" class="px-2 py-2 block">ABOUT</a>
+                    </li>
+                    <li
+                        class={isActive("/testimonials")
+                            ? "bg-primary-light"
+                            : ""}
+                    >
+                        <a href="/testimonials" class="px-2 py-2 block"
+                            >TESTIMONIALS</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Mobile Navigation (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pt-8 z-60 w-full shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
+            <ul class="flex flex-col list-none py-2">
+                <li class={isActive("/") ? "bg-primary-light" : ""}>
+                    <a href="/" class="px-4 py-2 block">HOME</a>
+                </li>
+                <li class={isActive("/about") ? "bg-primary-light" : ""}>
+                    <a href="/about" class="px-4 py-2 block">ABOUT</a>
+                </li>
+                <li class={isActive("/testimonials") ? "bg-primary-light" : ""}>
+                    <a href="/testimonials" class="px-4 py-2 block">TESTIMONIALS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="md:pt-[120px] pt-[80px]"></div>
+</header>
+
+<style>
+    .nav-links a {
+        color: #000;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    /* Make text white when parent has bg-primary-light class */
+    .bg-primary-light a {
+        color: white;
+    }
+    
+    /* Hamburger button styles */
+    .hamburger-line {
+        width: 28px;
+        height: 3px;
+        background-color: white;
+        margin: 3px 0;
+        transition: all 0.3s ease;
+    }
+    
+    /* Animation for hamburger to X */
+    .open .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .open .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .open .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+</style>
+
+<script>
+    // Client-side JavaScript for the hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        hamburgerBtn?.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('open');
+            if (mobileMenu?.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('block');
+            } else {
+                mobileMenu?.classList.add('hidden');
+                mobileMenu?.classList.remove('block');
+            }
+        });
+    });
+</script>
