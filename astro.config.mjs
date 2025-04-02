@@ -9,5 +9,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: "https://jwhector.github.io",
-  base: "havens-for-judge"
+  base: "havens-for-judge/"
 });

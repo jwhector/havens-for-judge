@@ -9,8 +9,8 @@ const baseUrl = import.meta.env.BASE_URL || "/";
 
 // Function to check if a path is active
 const isActive = (path: string) => {
-    if (path === "/" && currentPath === "/") return true;
-    if (path !== "/" && currentPath.startsWith(path)) return true;
+    const pathWithBaseUrl = baseUrl + path;
+    if (currentPath.startsWith(pathWithBaseUrl)) return true;
     return false;
 };
 ---
@@ -73,14 +73,14 @@ const isActive = (path: string) => {
         <!-- Mobile Navigation (hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white pt-8 z-60 w-full shadow-[0_4px_6px_rgba(0,0,0,0.1)]">
             <ul class="flex flex-col list-none py-2">
-                <li class={isActive("/") ? "bg-primary-light" : ""}>
-                    <a href="/" class="px-4 py-2 block">HOME</a>
+                <li class={isActive(baseUrl) ? "bg-primary-light" : ""}>
+                    <a href={baseUrl} class="px-4 py-2 block">HOME</a>
                 </li>
-                <li class={isActive("/about") ? "bg-primary-light" : ""}>
-                    <a href="/about" class="px-4 py-2 block">ABOUT</a>
+                <li class={isActive("about") ? "bg-primary-light" : ""}>
+                    <a href={`${baseUrl}/about`} class="px-4 py-2 block">ABOUT</a>
                 </li>
-                <li class={isActive("/testimonials") ? "bg-primary-light" : ""}>
-                    <a href="/testimonials" class="px-4 py-2 block">TESTIMONIALS</a>
+                <li class={isActive("testimonials") ? "bg-primary-light" : ""}>
+                    <a href={`${baseUrl}/testimonials`} class="px-4 py-2 block">TESTIMONIALS</a>
                 </li>
             </ul>
         </div>
