@@ -5,6 +5,8 @@ import poster from "../assets/havens_upscaled_sharpened.jpg";
 // Get current path to determine active page
 const currentPath = Astro.url.pathname;
 
+const baseUrl = import.meta.env.BASE_URL || "/";
+
 // Function to check if a path is active
 const isActive = (path: string) => {
     if (path === "/" && currentPath === "/") return true;
@@ -49,18 +51,18 @@ const isActive = (path: string) => {
                 <ul
                     class="nav-links sm:ml-[300px] md:ml-[350px] flex list-none gap-4"
                 >
-                    <li class={isActive("/") ? "bg-primary-light" : ""}>
-                        <a href="/" class="px-2 py-2 block">HOME</a>
+                    <li class={isActive(baseUrl) ? "bg-primary-light" : ""}>
+                        <a href={baseUrl} class="px-2 py-2 block">HOME</a>
                     </li>
                     <li class={isActive("/about") ? "bg-primary-light" : ""}>
-                        <a href="/about" class="px-2 py-2 block">ABOUT</a>
+                        <a href={`${baseUrl}/about`} class="px-2 py-2 block">ABOUT</a>
                     </li>
                     <li
                         class={isActive("/testimonials")
                             ? "bg-primary-light"
                             : ""}
                     >
-                        <a href="/testimonials" class="px-2 py-2 block"
+                        <a href={`${baseUrl}/testimonials`} class="px-2 py-2 block"
                             >TESTIMONIALS</a
                         >
                     </li>
