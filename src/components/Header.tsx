@@ -11,6 +11,7 @@ export default function Header({ pathname }: { pathname: string }) {
     // Function to check if a path is active
     const isActive = (path = "") => {
         const pathWithBaseUrl = baseUrl + path;
+        console.log(pathname, path, pathWithBaseUrl);
         return pathname === pathWithBaseUrl;
     };
 
