@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import Image from "astro/components/Image.astro";
-import poster from "../assets/havens_upscaled_sharpened.jpg";
+import poster from "../assets/poster.png";
 import "../styles/Header.css";
 
 // Get current path to determine active page
@@ -45,7 +45,7 @@ export default function Header({ pathname }: { pathname: string }) {
                         <img
                             src={poster.src}
                             alt="Candidate Photo"
-                            className="absolute top-0 shadow-[0_4px_6px_rgba(0,0,0,0.4)] z-50 md:w-fit sm:w-[250px] w-[150px]"
+                            className="absolute top-0 shadow-[0_4px_6px_rgba(0,0,0,0.4)] z-50 md:w-[300px] sm:w-[250px] w-[150px]"
                         />
 
                         <button
