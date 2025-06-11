@@ -1,7 +1,7 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Users, Building, Shield, Heart } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Users, Building, Shield, Heart } from "lucide-react";
 
 export default function EndorsementsPage() {
   const endorsements = [
@@ -25,7 +25,8 @@ export default function EndorsementsPage() {
         {
           name: "Firefighters Union Local 892",
           title: "Professional Firefighters",
-          quote: "We trust Judge Martinez to make fair decisions that protect our community and support public safety.",
+          quote:
+            "We trust Judge Martinez to make fair decisions that protect our community and support public safety.",
         },
       ],
     },
@@ -37,7 +38,8 @@ export default function EndorsementsPage() {
         {
           name: "State Bar Association",
           title: "District Chapter",
-          quote: "Judge Martinez exemplifies the highest standards of legal professionalism and judicial temperament.",
+          quote:
+            "Judge Martinez exemplifies the highest standards of legal professionalism and judicial temperament.",
         },
         {
           name: "Women Lawyers Association",
@@ -98,31 +100,37 @@ export default function EndorsementsPage() {
         {
           name: "Domestic Violence Prevention Coalition",
           title: "Victim Advocacy",
-          quote: "Judge Martinez has shown deep commitment to protecting victims and ensuring their voices are heard.",
+          quote:
+            "Judge Martinez has shown deep commitment to protecting victims and ensuring their voices are heard.",
         },
         {
           name: "Civil Rights Alliance",
           title: "Rights Organization",
-          quote: "Sarah Martinez will protect civil liberties and ensure equal justice under the law for all citizens.",
+          quote:
+            "Sarah Martinez will protect civil liberties and ensure equal justice under the law for all citizens.",
         },
         {
           name: "Senior Citizens Advocacy Group",
           title: "Elder Rights",
-          quote: "Judge Martinez understands the unique challenges facing seniors and will protect their interests.",
+          quote:
+            "Judge Martinez understands the unique challenges facing seniors and will protect their interests.",
         },
       ],
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Endorsements</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Endorsements
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Judge Martinez has earned the trust and support of leaders across our community, from law enforcement to
-            advocacy groups, all united in their belief in her qualifications and integrity.
+            Judge Martinez has earned the trust and support of leaders across
+            our community, from law enforcement to advocacy groups, all united
+            in their belief in her qualifications and integrity.
           </p>
         </div>
 
@@ -131,10 +139,14 @@ export default function EndorsementsPage() {
           {endorsements.map((category, categoryIndex) => (
             <div key={categoryIndex}>
               <div className="flex items-center gap-4 mb-8">
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center ${category.color}`}>
+                <div
+                  className={`w-12 h-12 rounded-full flex items-center justify-center ${category.color}`}
+                >
                   <category.icon className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900">{category.category}</h2>
+                <h2 className="text-3xl font-bold text-gray-900">
+                  {category.category}
+                </h2>
                 <Badge variant="secondary" className="ml-auto">
                   {category.endorsers.length} Endorsements
                 </Badge>
@@ -142,13 +154,18 @@ export default function EndorsementsPage() {
 
               <div className="grid md:grid-cols-2 gap-6">
                 {category.endorsers.map((endorser, endorserIndex) => (
-                  <Card key={endorserIndex} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+                  <Card
+                    key={endorserIndex}
+                    className="border-0 shadow-lg hover:shadow-xl transition-shadow"
+                  >
                     <CardHeader>
                       <CardTitle className="text-lg">{endorser.name}</CardTitle>
                       <p className="text-sm text-gray-600">{endorser.title}</p>
                     </CardHeader>
                     <CardContent>
-                      <blockquote className="text-gray-700 italic">"{endorser.quote}"</blockquote>
+                      <blockquote className="text-gray-700 italic">
+                        "{endorser.quote}"
+                      </blockquote>
                     </CardContent>
                   </Card>
                 ))}
@@ -159,7 +176,9 @@ export default function EndorsementsPage() {
 
         {/* Stats Section */}
         <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg mt-16 mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Broad Community Support</h2>
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Broad Community Support
+          </h2>
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-blue-600 mb-2">15+</div>
@@ -170,7 +189,9 @@ export default function EndorsementsPage() {
               <p className="text-gray-600">Key Sectors</p>
             </div>
             <div>
-              <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
+              <div className="text-4xl font-bold text-purple-600 mb-2">
+                100%
+              </div>
               <p className="text-gray-600">Bar Rating</p>
             </div>
             <div>
@@ -182,13 +203,26 @@ export default function EndorsementsPage() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Join These Leaders in Supporting Judge Martinez</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Join These Leaders in Supporting Judge Martinez
+          </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Add your voice to the growing coalition supporting experienced, fair, and dedicated judicial leadership.
+            Add your voice to the growing coalition supporting experienced,
+            fair, and dedicated judicial leadership.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-6">
-              Donate Now
+            <Button
+              asChild
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-6"
+            >
+              <a
+                href="https://secure.anedot.com/danielle-havens-for-judge/donate"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Donate Now
+              </a>
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6">
               Volunteer
@@ -197,5 +231,5 @@ export default function EndorsementsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

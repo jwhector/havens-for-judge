@@ -1,7 +1,7 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { GraduationCap, Briefcase, Award, Users } from "lucide-react"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { GraduationCap, Briefcase, Award, Users } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -9,10 +9,11 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">About Judge Sarah Martinez</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A dedicated public servant with the experience, integrity, and vision to serve our community with
-            distinction.
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            About Danielle Havens
+          </h1>
+          <p className="text-3xl text-gray-600 max-w-3xl mx-auto italic">
+            The Experience We Need
           </p>
         </div>
 
@@ -21,7 +22,7 @@ export default function AboutPage() {
           <div>
             <Image
               src="/placeholder.svg?height=500&width=400"
-              alt="Judge Sarah Martinez"
+              alt="Danielle Havens"
               width={400}
               height={500}
               className="rounded-xl shadow-lg w-full"
@@ -30,25 +31,32 @@ export default function AboutPage() {
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-gray-900">My Story</h2>
             <p className="text-gray-700 leading-relaxed">
-              Born and raised in our community, I have dedicated my career to serving the people of this district. After
-              graduating summa cum laude from State University Law School, I began my legal career as a public defender,
-              ensuring that everyone—regardless of their circumstances—had access to quality legal representation.
+              Born and raised in our community, I have dedicated my career to
+              serving the people of this district. After graduating summa cum
+              laude from State University Law School, I began my legal career as
+              a public defender, ensuring that everyone—regardless of their
+              circumstances—had access to quality legal representation.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Over the past 15 years, I have served in various capacities within our legal system, from prosecutor to
-              private practice attorney, giving me a comprehensive understanding of how our courts work and how they can
-              work better for everyone.
+              Over the past 15 years, I have served in various capacities within
+              our legal system, from prosecutor to private practice attorney,
+              giving me a comprehensive understanding of how our courts work and
+              how they can work better for everyone.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              As your judge, I will bring this diverse experience, along with my commitment to fairness, efficiency, and
-              accessibility, to ensure our judicial system serves all members of our community with dignity and respect.
+              As your judge, I will bring this diverse experience, along with my
+              commitment to fairness, efficiency, and accessibility, to ensure
+              our judicial system serves all members of our community with
+              dignity and respect.
             </p>
           </div>
         </div>
 
         {/* Experience Timeline */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Professional Experience</h2>
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Professional Experience
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6">
@@ -56,7 +64,9 @@ export default function AboutPage() {
                   <GraduationCap className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">2009</h3>
-                <p className="text-gray-600 text-sm">Graduated summa cum laude from State University Law School</p>
+                <p className="text-gray-600 text-sm">
+                  Graduated summa cum laude from State University Law School
+                </p>
               </CardContent>
             </Card>
 
@@ -66,7 +76,9 @@ export default function AboutPage() {
                   <Users className="h-6 w-6 text-green-600" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">2009-2014</h3>
-                <p className="text-gray-600 text-sm">Public Defender, representing over 500 clients</p>
+                <p className="text-gray-600 text-sm">
+                  Public Defender, representing over 500 clients
+                </p>
               </CardContent>
             </Card>
 
@@ -76,7 +88,9 @@ export default function AboutPage() {
                   <Briefcase className="h-6 w-6 text-purple-600" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">2014-2020</h3>
-                <p className="text-gray-600 text-sm">Assistant District Attorney, prosecuting complex cases</p>
+                <p className="text-gray-600 text-sm">
+                  Assistant District Attorney, prosecuting complex cases
+                </p>
               </CardContent>
             </Card>
 
@@ -86,7 +100,9 @@ export default function AboutPage() {
                   <Award className="h-6 w-6 text-orange-600" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">2020-Present</h3>
-                <p className="text-gray-600 text-sm">Private practice focusing on family and civil law</p>
+                <p className="text-gray-600 text-sm">
+                  Private practice focusing on family and civil law
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -94,27 +110,34 @@ export default function AboutPage() {
 
         {/* Values Section */}
         <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">My Judicial Philosophy</h2>
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            My Judicial Philosophy
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <h3 className="text-xl font-bold mb-4 text-blue-600">Fairness</h3>
               <p className="text-gray-600">
-                Every person who enters my courtroom will be treated with dignity and respect, regardless of their
-                background or circumstances.
+                Every person who enters my courtroom will be treated with
+                dignity and respect, regardless of their background or
+                circumstances.
               </p>
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-bold mb-4 text-green-600">Efficiency</h3>
+              <h3 className="text-xl font-bold mb-4 text-green-600">
+                Efficiency
+              </h3>
               <p className="text-gray-600">
-                Justice delayed is justice denied. I will work to ensure cases are handled promptly while maintaining
-                thoroughness.
+                Justice delayed is justice denied. I will work to ensure cases
+                are handled promptly while maintaining thoroughness.
               </p>
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-bold mb-4 text-purple-600">Accessibility</h3>
+              <h3 className="text-xl font-bold mb-4 text-purple-600">
+                Accessibility
+              </h3>
               <p className="text-gray-600">
-                Our courts should be accessible to all. I will work to remove barriers and ensure everyone can navigate
-                our legal system.
+                Our courts should be accessible to all. I will work to remove
+                barriers and ensure everyone can navigate our legal system.
               </p>
             </div>
           </div>
@@ -122,15 +145,28 @@ export default function AboutPage() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Make a Difference?</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Ready to Make a Difference?
+          </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join me in building a more fair, efficient, and accessible judicial system for our community.
+            Join me in building a more fair, efficient, and accessible judicial
+            system for our community.
           </p>
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-6">
-            Support My Campaign
+          <Button
+            asChild
+            size="lg"
+            className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-6"
+          >
+            <a
+              href="https://secure.anedot.com/danielle-havens-for-judge/donate"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Support My Campaign
+            </a>
           </Button>
         </div>
       </div>
     </div>
-  )
+  );
 }

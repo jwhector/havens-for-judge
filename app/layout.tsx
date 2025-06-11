@@ -8,8 +8,8 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Judge Sarah Martinez - 2024 Judicial Election",
-  description: "Experienced, Fair, Dedicated - Vote for Judge Sarah Martinez",
+  title: "Danielle Havens for Judge",
+  description: "Experienced, Fair, Dedicated - Vote for Danielle Havens",
     generator: 'v0.dev'
 }
 
