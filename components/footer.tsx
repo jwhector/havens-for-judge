@@ -12,9 +12,6 @@ export default function Footer() {
               href="/"
               className="flex items-center gap-2 font-bold text-xl mb-4"
             >
-              <div className="bg-blue-600 p-2 rounded-lg">
-                <Scale className="h-6 w-6 text-white" />
-              </div>
               Danielle Havens
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
@@ -79,12 +76,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/endorse"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  Volunteer
-                </a>
+                  Endorse Danielle Havens
+                </Link>
               </li>
             </ul>
           </div>
@@ -104,41 +101,44 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/endorse"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  Volunteer
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Events
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Contact Us
-                </a>
+                  Endorse Danielle Havens
+                </Link>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} Danielle Havens for Judge
-            Campaign. All rights reserved.
-          </p>
-          <p className="text-gray-500 text-sm mt-2">
-            Paid for by Danielle Havens for Judge
-          </p>
+          <div className="text-gray-300 space-y-3">
+            <p className="font-semibold text-base">
+              Paid for by Danielle Havens for Judge
+              <br />
+              Federal Way Municipal Court, Position No. 2
+            </p>
+            <p className="text-gray-300">
+              31811 Pacific Highway South, Suite B-302
+              <br />
+              Federal Way, Washington 98003
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 mt-4">
+              <a
+                href="mailto:danielle@havensforjudge.com"
+                className="text-gray-300 hover:text-white transition-colors font-medium"
+              >
+                danielle@havensforjudge.com
+              </a>
+              <a
+                href="tel:206.771.9638"
+                className="text-gray-300 hover:text-white transition-colors font-medium"
+              >
+                206.771.9638
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

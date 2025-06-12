@@ -13,7 +13,8 @@ const config: Config = {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        "primary-custom": "#4f46e5",
+        "primary-custom": "#293b91",
+        "primary-custom-mid": "#1b6bb0",
         "primary-custom-light": "#25a3cd",
         card: {
           DEFAULT: "hsl(var(--card))",

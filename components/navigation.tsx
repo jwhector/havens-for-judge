@@ -12,9 +12,9 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/endorsements", label: "Endorsements" },
+    { href: "/", label: "HOME" },
+    { href: "/about", label: "ABOUT" },
+    { href: "/endorsements", label: "ENDORSEMENTS" },
   ];
 
   return (
@@ -33,7 +33,7 @@ export default function Navigation() {
         </div>
       </div>
 
-      <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
+      <nav className="bg-primary-custom shadow-sm border-b sticky top-0 z-50 text-xl">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Spacer for poster area */}
@@ -45,27 +45,32 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`font-medium transition-colors hover:text-blue-600 ${
-                    pathname === item.href ? "text-blue-600" : "text-gray-700"
+                  className={`font-medium transition-colors hover:text-primary-custom-light ${
+                    pathname === item.href
+                      ? "text-primary-custom-light"
+                      : "text-white"
                   }`}
                 >
                   {item.label}
                 </Link>
               ))}
-              <Button asChild className="bg-blue-600 hover:bg-blue-700">
+              <Button
+                asChild
+                className="bg-primary-custom-light hover:bg-primary-custom-mid text-2xl "
+              >
                 <a
                   href="https://secure.anedot.com/danielle-havens-for-judge/donate"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Donate
+                  DONATE
                 </a>
               </Button>
             </div>
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2"
+              className="md:hidden p-2 text-white"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
@@ -84,21 +89,26 @@ export default function Navigation() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`font-medium transition-colors hover:text-blue-600 ${
-                      pathname === item.href ? "text-blue-600" : "text-gray-700"
+                    className={`font-medium transition-colors hover:text-primary-custom-light ${
+                      pathname === item.href
+                        ? "text-primary-custom-light"
+                        : "text-white"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
                   </Link>
                 ))}
-                <Button asChild className="bg-blue-600 hover:bg-blue-700 w-fit">
+                <Button
+                  asChild
+                  className="bg-primary-custom-light hover:bg-primary-custom-mid w-fit"
+                >
                   <a
                     href="https://secure.anedot.com/danielle-havens-for-judge/donate"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Donate
+                    DONATE
                   </a>
                 </Button>
               </div>
