@@ -27,7 +27,7 @@ export default function AboutPage() {
             </h1>
 
             <div className="grid gap-8 md:grid-cols-[2fr_1fr] items-start">
-              <div className="space-y-6">
+              <div className="space-y-6 order-2 md:order-1">
                 <p className="text-lg">
                   Danielle Havens has served our community for over 20 years
                   with distinction and honor. Her commitment to justice and
@@ -100,13 +100,13 @@ export default function AboutPage() {
                 </ul>
               </div>
 
-              <div className="sticky top-20">
-                <div className="relative h-[350px] w-full overflow-hidden rounded-lg shadow-md mb-6">
+              <div className="md:sticky md:top-20 order-1 md:order-2">
+                <div className="relative h-[450px] md:h-[350px] w-full overflow-hidden rounded-lg shadow-md mb-6">
                   <Image
                     src="/about-portrait.jpg"
                     alt="Danielle Havens in her office"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 <div className="bg-slate-50 p-4 rounded-lg">
