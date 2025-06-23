@@ -56,7 +56,7 @@ export default function Navigation() {
               ))}
               <Button
                 asChild
-                className="bg-primary-custom-light hover:bg-primary-custom-mid text-2xl "
+                className="bg-primary-custom-light hover:bg-primary-custom-mid text-xl "
               >
                 <a
                   href="https://secure.anedot.com/danielle-havens-for-judge/donate"

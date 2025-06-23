@@ -4,7 +4,7 @@ import Image from "next/image";
 // Simple DonateButton component
 function DonateButton({ className }: { className?: string }) {
   return (
-    <Button asChild className={className}>
+    <Button asChild className={`bg-primary-custom-mid hover:bg-primary-custom text-white text-lg ${className}`}>
       <a
         href="https://secure.anedot.com/danielle-havens-for-judge/donate"
         target="_blank"
@@ -20,9 +20,9 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
-        <div className="container px-6 sm:px-8 py-12">
+        <div className="w-full px-6 sm:px-8 py-12">
           <div className="mx-auto max-w-3xl">
-            <h1 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+            <h1 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl mb-6 text-primary-custom-mid">
               About Danielle Havens
             </h1>
 
@@ -32,10 +32,10 @@ export default function AboutPage() {
                   Danielle Havens has served our community for over 20 years
                   with distinction and honor. Her commitment to justice and
                   fairness has made her one of the most respected judicial
-                  figures in our district.
+                  officers in our court system.
                 </p>
 
-                <h2 className="font-serif text-2xl font-bold mt-8">
+                <h2 className="font-serif text-2xl font-bold mt-8 text-primary-custom-mid">
                   Experience
                 </h2>
                 <ul className="space-y-4">
@@ -44,7 +44,7 @@ export default function AboutPage() {
                       Judge Pro-Tem, Federal Way Municipal Court
                     </h3>
                     <p className="text-sm text-muted-foreground">
-                      2010 - Current
+                      2021 - Current
                     </p>
                   </li>
                   <li className="border-l-2 border-slate-200 pl-4">
@@ -52,7 +52,7 @@ export default function AboutPage() {
                       Judge Pro-Tem, Kent Municipal Court
                     </h3>
                     <p className="text-sm text-muted-foreground">
-                      2010 - Current
+                      2021 - Current
                     </p>
                   </li>
                   <li className="border-l-2 border-slate-200 pl-4">
@@ -69,7 +69,7 @@ export default function AboutPage() {
                   </li>
                 </ul>
 
-                <h2 className="font-serif text-2xl font-bold mt-8">
+                <h2 className="font-serif text-2xl font-bold mt-8 text-primary-custom-mid">
                   Education
                 </h2>
                 <ul className="space-y-4">
@@ -89,14 +89,14 @@ export default function AboutPage() {
                   </li>
                 </ul>
 
-                <h2 className="font-serif text-2xl font-bold mt-8">
+                <h2 className="font-serif text-2xl font-bold mt-8 text-primary-custom-mid">
                   Community Service
                 </h2>
                 <ul className="space-y-2">
-                  <li>Federal Way Community Care Giving Network</li>
-                  <li>West Seattle Food Bank</li>
-                  <li>YWCA of King County</li>
-                  <li>WestSide Baby</li>
+                  <li className="border-l-2 border-slate-200 pl-4">Federal Way Community Care Giving Network</li>
+                  <li className="border-l-2 border-slate-200 pl-4">WestSide Baby Hub, basics for children in need</li>
+                  <li className="border-l-2 border-slate-200 pl-4">West Seattle Food Bank</li>
+                  <li className="border-l-2 border-slate-200 pl-4">YWCA of King County</li>
                 </ul>
               </div>
 
@@ -110,7 +110,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <div className="bg-slate-50 p-4 rounded-lg">
-                  <h3 className="font-serif text-lg font-medium mb-2">
+                  <h3 className="font-serif text-lg font-medium mb-2 text-primary-custom-mid">
                     Campaign Platform
                   </h3>
                   <ul className="space-y-2 text-sm">

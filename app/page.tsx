@@ -22,18 +22,18 @@ export default function HomePage() {
             {/* <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
               2024 Judicial Election
             </div> */}
-            <h1 className="text-4xl lg:text-7xl xl:text-8xl font-bold text-gray-900 mb-4 leading-tight">
+            <h1 className="text-4xl lg:text-7xl xl:text-8xl font-bold text-primary-custom-mid mb-4 leading-tight">
               Danielle
-              <span className="text-primary-custom-mid ml-2 relative">
+              <span className="ml-2 relative">
                 HAVENS
               </span>
             </h1>
             <p className="text-xl justify-end text-gray-600 mb-8 leading-relaxed">
-              Federal Way Municipal Court Position No. 2
+              Federal Way Municipal Court <br /> Position No. 2
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button
+              {/* <Button
                 asChild
                 size="lg"
                 className="bg-primary-custom-mid hover:bg-primary-custom text-lg px-8 py-6"
@@ -45,7 +45,7 @@ export default function HomePage() {
                 >
                   Donate Today
                 </a>
-              </Button>
+              </Button> */}
               <Button
                 variant="outline"
                 size="lg"
@@ -80,7 +80,7 @@ export default function HomePage() {
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-primary-custom-mid mb-4">
               WHY DANIELLE HAVENS?
             </h2>
           </div>
@@ -89,7 +89,7 @@ export default function HomePage() {
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 h-full hover:shadow-lg transition-shadow duration-200">
               <div className="flex flex-col items-center text-center">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4 border-b border-gray-100 pb-2">
+                  <h3 className="text-xl font-semibold text-primary-custom-mid mb-4 border-b border-gray-100 pb-2">
                     Experience & Commitment
                   </h3>
                   <p className="text-gray-700 text-base leading-relaxed">
@@ -106,7 +106,7 @@ export default function HomePage() {
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 h-full hover:shadow-lg transition-shadow duration-200">
               <div className="flex flex-col items-center text-center">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4 border-b border-gray-100 pb-2">
+                  <h3 className="text-xl font-semibold text-primary-custom-mid mb-4 border-b border-gray-100 pb-2">
                     Accountability & Objectivity
                   </h3>
                   <p className="text-gray-700 text-base leading-relaxed">
@@ -123,7 +123,7 @@ export default function HomePage() {
             <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 h-full hover:shadow-lg transition-shadow duration-200">
               <div className="flex flex-col items-center text-center">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4 border-b border-gray-100 pb-2">
+                  <h3 className="text-xl font-semibold text-primary-custom-mid mb-4 border-b border-gray-100 pb-2">
                     The Right Choice
                   </h3>
                   <p className="text-gray-700 text-base leading-relaxed">
@@ -143,13 +143,21 @@ export default function HomePage() {
       <section className="bg-primary-custom-mid py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Join the Movement for Justice
+            Join <span className="underline">OUR</span> Campaign
           </h2>
           <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
             Your support helps ensure fair, experienced, and dedicated
             leadership on the bench.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              variant="secondary"
+              size="lg"
+              asChild
+              className="text-lg px-8 py-6"
+            >
+              <Link href="/endorse">Endorse Danielle Havens</Link>
+            </Button>
             <Button
               asChild
               size="lg"
@@ -163,14 +171,6 @@ export default function HomePage() {
               >
                 Donate Now
               </a>
-            </Button>
-            <Button
-              variant="secondary"
-              size="lg"
-              asChild
-              className="text-lg px-8 py-6"
-            >
-              <Link href="/endorse">Endorse Danielle Havens</Link>
             </Button>
           </div>
         </div>

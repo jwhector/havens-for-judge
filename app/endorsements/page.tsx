@@ -63,9 +63,9 @@ export default function EndorsementsPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
-        <div className="container px-6 sm:px-8 py-12">
+        <div className="w-full px-6 sm:px-8 py-12">
           <div className="mx-auto max-w-4xl">
-            <h1 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl mb-6 text-center">
+            <h1 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl mb-6 text-center text-primary-custom-mid">
               Endorsements
             </h1>
             <p className="text-lg text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -78,12 +78,9 @@ export default function EndorsementsPage() {
               {endorsements.map((category, categoryIndex) => (
                 <div key={categoryIndex}>
                   <div className="flex items-center gap-4 mb-6">
-                    <h2 className="font-serif text-2xl font-bold text-gray-900">
+                    <h2 className="font-serif text-2xl font-bold text-primary-custom-mid">
                       {category.category}
                     </h2>
-                    <Badge variant="secondary">
-                      {category.endorsers.length} Endorsements
-                    </Badge>
                   </div>
 
                   <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
@@ -107,46 +104,9 @@ export default function EndorsementsPage() {
               ))}
             </div>
 
-            {/* Stats Section */}
-            <div className="bg-slate-50 rounded-lg p-8 mt-16 mb-16">
-              <h2 className="font-serif text-2xl font-bold text-gray-900 text-center mb-8">
-                Strong Judicial Support
-              </h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">
-                    24
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Judicial Endorsements
-                  </p>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">3</div>
-                  <p className="text-sm text-muted-foreground">
-                    Superior Court Judges
-                  </p>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">
-                    13
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Municipal Court Judges
-                  </p>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">6</div>
-                  <p className="text-sm text-muted-foreground">
-                    District Court Judges
-                  </p>
-                </div>
-              </div>
-            </div>
-
             {/* Call to Action */}
-            <div className="text-center bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <h2 className="font-serif text-2xl font-bold text-gray-900 mb-4">
+            <div className="text-center bg-white p-8 mt-16 rounded-lg shadow-sm border border-gray-200">
+              <h2 className="font-serif text-2xl font-bold text-primary-custom-mid mb-4">
                 Join These Leaders in Supporting Danielle Havens
               </h2>
               <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
