@@ -21,7 +21,8 @@ export default function EndorsementsPage() {
         { name: "Dwayne Christopher", title: "Pierce County District Court" },
         {
           name: "Rebecca Robertson, Presiding",
-          title: "King County District Court",
+          title:
+            "King County District Court, former Judge in Federal Way Municipal Court",
         },
         { name: "Michelle Gehlsen", title: "King County District Court" },
         { name: "Lisa O'Toole", title: "King County District Court" },
@@ -207,6 +208,22 @@ export default function EndorsementsPage() {
               our community, all united in their belief in her qualifications
               and integrity.
             </p>
+
+            {/* 30th Legislative District Democrats Endorsement */}
+            <div className="mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <div className="text-center">
+                  <div className="mb-4">
+                    <h2 className="font-serif text-2xl font-bold text-primary-custom-mid mb-2">
+                      Endorsed by
+                    </h2>
+                    <h3 className="font-serif text-xl font-semibold text-primary-custom-mid">
+                      The 30th Legislative District Democrats
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="space-y-12">
               {endorsements.map((category, categoryIndex) => (
