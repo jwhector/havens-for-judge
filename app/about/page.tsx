@@ -4,9 +4,12 @@ import Image from "next/image";
 // Simple DonateButton component
 function DonateButton({ className }: { className?: string }) {
   return (
-    <Button asChild className={`bg-primary-custom-mid hover:bg-primary-custom text-white text-lg ${className}`}>
+    <Button
+      asChild
+      className={`bg-primary-custom-mid hover:bg-primary-custom text-white text-lg ${className}`}
+    >
       <a
-        href="https://secure.anedot.com/danielle-havens-for-judge/donate"
+        href="https://secure.anedot.com/danielle-havens-for-judge/15a1624a-9044-43fb-a5ad-c37a2618d170"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -93,10 +96,18 @@ export default function AboutPage() {
                   Community Service
                 </h2>
                 <ul className="space-y-2">
-                  <li className="border-l-2 border-slate-200 pl-4">Federal Way Community Care Giving Network</li>
-                  <li className="border-l-2 border-slate-200 pl-4">WestSide Baby Hub, basics for children in need</li>
-                  <li className="border-l-2 border-slate-200 pl-4">West Seattle Food Bank</li>
-                  <li className="border-l-2 border-slate-200 pl-4">YWCA of King County</li>
+                  <li className="border-l-2 border-slate-200 pl-4">
+                    Federal Way Community Care Giving Network
+                  </li>
+                  <li className="border-l-2 border-slate-200 pl-4">
+                    WestSide Baby Hub, basics for children in need
+                  </li>
+                  <li className="border-l-2 border-slate-200 pl-4">
+                    West Seattle Food Bank
+                  </li>
+                  <li className="border-l-2 border-slate-200 pl-4">
+                    YWCA of King County
+                  </li>
                 </ul>
               </div>
 

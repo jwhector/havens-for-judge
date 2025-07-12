@@ -24,9 +24,7 @@ export default function HomePage() {
             </div> */}
             <h1 className="text-4xl lg:text-7xl xl:text-8xl font-bold text-primary-custom-mid mb-4 leading-tight">
               Danielle
-              <span className="ml-2 relative">
-                HAVENS
-              </span>
+              <span className="ml-2 relative">HAVENS</span>
             </h1>
             <p className="text-xl justify-end text-gray-600 mb-8 leading-relaxed">
               Federal Way Municipal Court <br /> Position No. 2
@@ -39,7 +37,7 @@ export default function HomePage() {
                 className="bg-primary-custom-mid hover:bg-primary-custom text-lg px-8 py-6"
               >
                 <a
-                  href="https://secure.anedot.com/danielle-havens-for-judge/donate"
+                  href="https://secure.anedot.com/danielle-havens-for-judge/15a1624a-9044-43fb-a5ad-c37a2618d170"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -165,7 +163,7 @@ export default function HomePage() {
               className="text-lg px-8 py-6"
             >
               <a
-                href="https://secure.anedot.com/danielle-havens-for-judge/donate"
+                href="https://secure.anedot.com/danielle-havens-for-judge/15a1624a-9044-43fb-a5ad-c37a2618d170"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -52,6 +52,7 @@ const formSchema = z.object({
 
 export default function EndorsePage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -68,17 +69,37 @@ export default function EndorsePage() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Here you would typically send the data to your backend
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/endorsements", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
 
-    // For now, we'll just show a success message
-    toast({
-      title: "Thank you for your endorsement!",
-      description: "Your endorsement has been submitted successfully.",
-    });
+      if (!response.ok) {
+        throw new Error("Failed to submit endorsement");
+      }
 
-    setIsSubmitted(true);
+      toast({
+        title: "Thank you for your endorsement!",
+        description: "Your endorsement has been submitted successfully.",
+      });
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Error submitting endorsement:", error);
+      toast({
+        title: "Error",
+        description: "Failed to submit endorsement. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   if (isSubmitted) {
@@ -112,7 +133,7 @@ export default function EndorsePage() {
                       className="bg-primary-custom-mid hover:bg-primary-custom"
                     >
                       <a
-                        href="https://secure.anedot.com/danielle-havens-for-judge/donate"
+                        href="https://secure.anedot.com/danielle-havens-for-judge/15a1624a-9044-43fb-a5ad-c37a2618d170"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -293,11 +314,9 @@ export default function EndorsePage() {
                       <Button
                         type="submit"
                         className="flex-1 bg-primary-custom-mid hover:bg-primary-custom text-lg py-6"
-                        disabled={form.formState.isSubmitting}
+                        disabled={isSubmitting}
                       >
-                        {form.formState.isSubmitting
-                          ? "Submitting..."
-                          : "Submit Endorsement"}
+                        {isSubmitting ? "Submitting..." : "Submit Endorsement"}
                       </Button>
                     </div>
                   </form>
@@ -315,7 +334,7 @@ export default function EndorsePage() {
                 className="text-primary-custom-mid border-primary-custom-mid hover:bg-primary-custom-mid hover:text-white"
               >
                 <a
-                  href="https://secure.anedot.com/danielle-havens-for-judge/donate"
+                  href="https://secure.anedot.com/danielle-havens-for-judge/15a1624a-9044-43fb-a5ad-c37a2618d170"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
