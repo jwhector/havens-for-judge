@@ -6,6 +6,13 @@ import { Button } from "@/components/ui/button";
 export default function EndorsementsPage() {
   const endorsements = [
     {
+      category: "State Representatives",
+      endorsers: [
+        { name: "Kristine Reeves", title: "30th LD Representative" },
+        { name: "Jamila Taylor", title: "30th LD Representative" },
+      ],
+    },
+    {
       category: "Superior Court Judges",
       endorsers: [
         { name: "Anna Alexander", title: "Snohomish County Superior Court" },
@@ -22,7 +29,7 @@ export default function EndorsementsPage() {
         {
           name: "Rebecca Robertson, Presiding",
           title:
-            "King County District Court, former Judge in Federal Way Municipal Court",
+          "King County District Court, former Judge in Federal Way Municipal Court",
         },
         { name: "Michelle Gehlsen", title: "King County District Court" },
         { name: "Lisa O'Toole", title: "King County District Court" },
@@ -138,6 +145,7 @@ export default function EndorsementsPage() {
         { name: "Shariza Ali" },
         { name: "Amylia Brown" },
         { name: "Megan Dunn" },
+        { name: "William (Bill) Schrader" },
         { name: "Hannah Purcell" },
         { name: "Mikk Lukk" },
       ],
@@ -191,6 +199,18 @@ export default function EndorsementsPage() {
         { name: "Craig Walker" },
         { name: "Sean Walsh" },
         { name: "Joanne Wegner" },
+        { name: "Linda Reichenbach" },
+        { name: "Chuck Lysen" },
+        { name: "Diane Meyers" },
+        { name: "Teri Holden" },
+        { name: "Megan Dunn" },
+        { name: "Karen McNamara" },
+        { name: "Dawn Farina" },
+        { name: "Emily M. Gause" },
+        { name: "Zana Molina" },
+        { name: "Janet Baker" },
+        { name: "Nathan J Orth" },
+        { name: "Neal Smead" },
       ],
     },
   ];
@@ -217,8 +237,11 @@ export default function EndorsementsPage() {
                     <h2 className="font-serif text-2xl font-bold text-primary-custom-mid mb-2">
                       Endorsed by
                     </h2>
-                    <h3 className="font-serif text-xl font-semibold text-primary-custom-mid">
+                    <h3 className="pt-2 font-serif text-xl font-semibold text-primary-custom-mid">
                       The 30th Legislative District Democrats
+                    </h3>
+                    <h3 className="pt-4 font-serif text-xl font-semibold text-primary-custom-mid">
+                      King County Democrats
                     </h3>
                   </div>
                 </div>
