@@ -4,12 +4,45 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 export default function EndorsementsPage() {
+  const majorEndorsements = [
+    { name: "King County Democrats", title: "County Party Organization" },
+    {
+      name: "30th Legislative District Democrats",
+      title: "Legislative District Organization",
+    },
+    { name: "Mayor Jim Ferrell", title: "City of Federal Way" },
+    {
+      name: "State Representative Kristine Reeves",
+      title: "30th Legislative District",
+    },
+    {
+      name: "State Representative Jamila Taylor",
+      title: "30th Legislative District",
+    },
+    {
+      name: "State Senator Claire Wilson",
+      title: "30th Legislative District",
+    },
+  ];
+
   const endorsements = [
     {
-      category: "State Representatives",
+      category: "State Legislators",
       endorsers: [
-        { name: "Kristine Reeves", title: "30th LD Representative" },
-        { name: "Jamila Taylor", title: "30th LD Representative" },
+        { name: "Claire Wilson", title: "30th LD State Senator" },
+        { name: "Kristine Reeves", title: "30th LD State Representative" },
+        { name: "Jamila Taylor", title: "30th LD State Representative" },
+      ],
+    },
+    {
+      category: "Local Government Leaders",
+      endorsers: [{ name: "Jim Ferrell", title: "Mayor of Federal Way" }],
+    },
+    {
+      category: "Democratic Organizations",
+      endorsers: [
+        { name: "King County Democrats" },
+        { name: "30th Legislative District Democrats" },
       ],
     },
     {
@@ -55,8 +88,10 @@ export default function EndorsementsPage() {
         { name: "Andrea Beall", title: "Puyallup Municipal Court" },
         { name: "Faye Chess", title: "Seattle Municipal Court" },
         { name: "Andrea Chin", title: "Seattle Municipal Court" },
+        { name: "Willie Gregory", title: "Seattle Municipal Court" },
         { name: "Anita Crawford-Willis", title: "Seattle Municipal Court" },
         { name: "Adam Eisenberg", title: "Tulalip Tribal Court" },
+        { name: "Damon Shadid", title: "Seattle Municipal Court" },
         { name: "Michael Frans", title: "Kent Municipal Court" },
         { name: "Jessica Giner", title: "Renton Municipal Court" },
         { name: "Anthony Gipe", title: "Kent Municipal Court" },
@@ -229,20 +264,28 @@ export default function EndorsementsPage() {
               and integrity.
             </p>
 
-            {/* 30th Legislative District Democrats Endorsement */}
             <div className="mb-12">
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <div className="text-center">
-                  <div className="mb-4">
-                    <h2 className="font-serif text-2xl font-bold text-primary-custom-mid mb-2">
-                      Endorsed by
-                    </h2>
-                    <h3 className="pt-2 font-serif text-xl font-semibold text-primary-custom-mid">
-                      The 30th Legislative District Democrats
-                    </h3>
-                    <h3 className="pt-4 font-serif text-xl font-semibold text-primary-custom-mid">
-                      King County Democrats
-                    </h3>
+              <div className="bg-white border border-primary-custom-mid/30 shadow-md rounded-xl px-6 py-8">
+                <div className="flex flex-col items-center text-center gap-6">
+                  <Badge className="bg-primary-custom-mid text-white px-3 py-1 uppercase tracking-wider">
+                    Major Endorsements
+                  </Badge>
+                  <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+                    {majorEndorsements.map((endorsement, index) => (
+                      <div
+                        key={`${endorsement.name}-${index}`}
+                        className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-5"
+                      >
+                        <h3 className="font-serif text-xl font-semibold text-primary-custom-mid">
+                          {endorsement.name}
+                        </h3>
+                        {endorsement.title ? (
+                          <p className="mt-2 text-sm text-muted-foreground">
+                            {endorsement.title}
+                          </p>
+                        ) : null}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -267,9 +310,11 @@ export default function EndorsementsPage() {
                           <h3 className="font-medium text-gray-900">
                             {endorser.name}
                           </h3>
-                          <p className="text-sm text-muted-foreground">
-                            {endorser.title}
-                          </p>
+                          {endorser.title ? (
+                            <p className="text-sm text-muted-foreground">
+                              {endorser.title}
+                            </p>
+                          ) : null}
                         </div>
                       ))}
                     </div>
