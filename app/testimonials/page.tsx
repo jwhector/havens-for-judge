@@ -13,6 +13,13 @@ interface Testimonial {
 export default function TestimonialsPage() {
   const testimonials: Testimonial[] = [
     {
+      name: "Ted C. Barr",
+      location: "Kirkland, WA",
+      comment:
+        "Danielle is smart, caring, articulate and when necessary can be firm. She is fair but holds people accountable while striving to help them and avoid recitivism. She will be a great judge. I wholeheartedly support her.",
+      date: "October 7, 2025",
+    },
+    {
       name: "William (Bill) Schrader",
       location: "Puyallup, WA",
       comment:
