@@ -62,7 +62,7 @@ export default function EndorsementsPage() {
         {
           name: "Rebecca Robertson, Presiding",
           title:
-          "King County District Court, former Judge in Federal Way Municipal Court",
+            "King County District Court, former Judge in Federal Way Municipal Court",
         },
         { name: "Michelle Gehlsen", title: "King County District Court" },
         { name: "Lisa O'Toole", title: "King County District Court" },
@@ -98,6 +98,7 @@ export default function EndorsementsPage() {
         { name: "Timothy Lewis", title: "Lakewood Municipal Court" },
         { name: "Catherine McDowell", title: "Seattle Municipal Court" },
         { name: "Kara Murphy", title: "Renton Municipal Court" },
+        { name: "Mara Rozzano", title: "Bothell Municipal Court" },
         { name: "N. Scott Stewart", title: "Issaquah Municipal Court" },
         {
           name: "Krista Swain",
