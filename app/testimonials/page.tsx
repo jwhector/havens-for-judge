@@ -12,6 +12,24 @@ interface Testimonial {
 export default function TestimonialsPage() {
   const testimonials: Testimonial[] = [
     {
+      name: "Judge Kara Murphy Richards",
+      location: "Presiding Judge, Renton Municipal Court",
+      comment:
+        "It is without reservation that I endorse Danielle Havens for Federal Way Municipal Court.\n\n I have known Danielle for many years and can attest to her character and her professional skills. We live in difficult times and balancing the needs of our court users and the safety of our community has become more complicated than ever. Danielle has consistently demonstrated compassionate accountability from the bench. She clearly sees the needs of the most vulnerable, but never loses sight of community safety. She understands that these two things can go hand in hand and need not be mutually exclusive.\n\nThe majority of Danielle's judicial experience has been in our local Municipal Courts. Municipal courts are very unique courts of limited jurisdiction. They are driven by the needs of those who live within the boundaries of a specific city. Through community engagement, municipal judges are able see the needs of those they serve up close and personal.\n\nThe community of Federal Way will be well served with Judge Danielle Havens on the bench.",
+    },
+    {
+      name: "Lizanne Padula",
+      location: "Pierce County District Court Judge",
+      comment:
+        "I endorse Danielle Havens for Federal Way Municipal Court Judge. She will not only be an exceptional Federal Way Municipal Court Judge, she will also be an active and contributing member of the Federal Way community. She understands that Municipal Court Judges are unique in their need to be connected to their community. She believes that a successful Municipal Court Judge should be engaged with their community and be familiar with the community priorities.\n\nFor the last four years, Danielle has been the person I trust the most to sit as a Pro Tem Judge when I am unavailable to preside over my assigned cases. She is compassionate, firm, knowledgeable and effective. To put it another way, if I was a victim of a crime or a defendant, charged with a crime, Danielle Havens is who I would want presiding over the case. Judges must balance accountability and therapeutic efforts in a way that enforces responsibility and recovery. This is a difficult task and Danielle Havens is able to achieve this balance perfectly.\n\nFederal Way will be well served by having Danielle Havens as their next Municipal Court Judge.",
+    },
+    {
+      name: "Anthony David Gipe",
+      location: "Judge, Kent Municipal Court",
+      comment:
+        "I have been a judge for six years and was a part time judge for eight years before that. I have worked directly with Danielle as she supports and works as a pro tem judge in my DUI Therapeutic Court over the last two and a half years.\n\nDanielle has all the qualities that I would wish to have in a judge: Knowledge, Empathy, and Commitment to finding solutions to the problems facing our justice system and our communities. She will make an excellent judge for Federal Way.",
+    },
+    {
       name: "Ted C. Barr",
       location: "Kirkland, WA",
       comment:
@@ -128,9 +146,22 @@ export default function TestimonialsPage() {
                     <div className="flex gap-4">
                       <Quote className="w-8 h-8 text-primary-custom-mid/30 flex-shrink-0 mt-1" />
                       <div className="flex-1">
-                        <p className="text-gray-700 text-base leading-relaxed mb-4 italic">
-                          "{testimonial.comment}"
-                        </p>
+                        <div className="text-gray-700 text-base leading-relaxed mb-4 italic">
+                          {testimonial.comment
+                            .split("\n\n")
+                            .map((paragraph, pIndex) => (
+                              <p
+                                key={pIndex}
+                                className={pIndex > 0 ? "mt-4" : ""}
+                              >
+                                {pIndex === 0 ? `"${paragraph}` : paragraph}
+                                {pIndex ===
+                                testimonial.comment.split("\n\n").length - 1
+                                  ? '"'
+                                  : ""}
+                              </p>
+                            ))}
+                        </div>
                         <div className="pt-4 border-t border-gray-100">
                           <p className="font-semibold text-primary-custom-mid">
                             {testimonial.name}
