@@ -301,6 +301,17 @@ export default function EndorsementsPage() {
                     </h2>
                   </div>
 
+                  {category.category === "Municipal Court Judges" && (
+                    <div className="mb-4 text-primary-custom-mid text-base">
+                      <p>
+                        Danielle is endorsed by all Municipal Court judges she
+                        has served for who are endorsing. Judge David Larsen and
+                        Judge Brad Bales of Federal Way Municipal Court are not
+                        endorsing in this race.
+                      </p>
+                    </div>
+                  )}
+
                   <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                       {category.endorsers.map((endorser, endorserIndex) => (
